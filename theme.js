@@ -8,13 +8,17 @@ import stillGoodsDark from './assets/still-goods-dark.png';
 import stillGoodsLight from './assets/still-goods-light.png';
 import fieldNotesMenuDark from './assets/field-notes-menu-dark.png';
 import fieldNotesMenuLight from './assets/field-notes-menu-light.png';
+import maxStewartMenuDark from './assets/maxstewart-dark.png';
+import maxStewartMenuLight from './assets/maxstewart-light.png';
 
 // Create asset map for dynamic access
 const assets = {
     'still-goods-dark': stillGoodsDark,
     'still-goods-light': stillGoodsLight,
     'field-notes-menu-dark': fieldNotesMenuDark,
-    'field-notes-menu-light': fieldNotesMenuLight
+    'field-notes-menu-light': fieldNotesMenuLight,
+    'maxstewart-dark': maxStewartMenuDark,
+    'maxstewart-light': maxStewartMenuLight
 };
 
 class ThemeManager {
@@ -78,12 +82,20 @@ class ThemeManager {
             stillGoodsLogo.src = assets[`still-goods-${assetSuffix}`];
         }
 
+        // Update Max Stewart modal image if it exists
+        const maxStewartModalImage = document.getElementById('maxStewartModalImage');
+        if (maxStewartModalImage) {
+            maxStewartModalImage.src = assets[`maxstewart-${assetSuffix}`];
+        }
+
         // Update navigation menu images
         const navImprintImages = document.querySelectorAll('.nav-imprint-img');
         navImprintImages.forEach(img => {
             const altText = img.alt;
             if (altText === 'Field Notes') {
                 img.src = assets[`field-notes-menu-${assetSuffix}`];
+            } else if (altText === 'Max Stewart') {
+                img.src = assets[`maxstewart-${assetSuffix}`];
             }
         });
     }
