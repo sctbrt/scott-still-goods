@@ -112,6 +112,12 @@ class ThemeManager {
             fieldNotesModalImage.src = assets[`field-notes-lockup-${assetSuffix}`];
         }
 
+        // Update Still Goods logo (used on Still Goods site only)
+        const stillGoodsLogo = document.querySelector('.brand-logo');
+        if (stillGoodsLogo) {
+            stillGoodsLogo.src = assets[`still-goods-${assetSuffix}`];
+        }
+
         // Update Still Goods modal image if it exists
         const stillGoodsModalImage = document.getElementById('stillGoodsModalImage');
         if (stillGoodsModalImage) {
