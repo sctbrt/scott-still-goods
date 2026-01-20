@@ -6,6 +6,8 @@
 // Import image variants for Vite build
 import stillGoodsDark from './assets/still-goods-dark.png';
 import stillGoodsLight from './assets/still-goods-light.png';
+import stillGoodsLogoDark from './assets/still-goods-logo-dark.png';
+import stillGoodsLogoLight from './assets/still-goods-logo-light.png';
 import fieldNotesMenuDark from './assets/field-notes-menu-dark.png';
 import fieldNotesMenuLight from './assets/field-notes-menu-light.png';
 import maxStewartMenuDark from './assets/maxstewart-dark.png';
@@ -15,6 +17,8 @@ import maxStewartMenuLight from './assets/maxstewart-light.png';
 const assets = {
     'still-goods-dark': stillGoodsDark,
     'still-goods-light': stillGoodsLight,
+    'still-goods-logo-dark': stillGoodsLogoDark,
+    'still-goods-logo-light': stillGoodsLogoLight,
     'field-notes-menu-dark': fieldNotesMenuDark,
     'field-notes-menu-light': fieldNotesMenuLight,
     'maxstewart-dark': maxStewartMenuDark,
@@ -76,10 +80,16 @@ class ThemeManager {
         // Update images (inverse relationship: light theme = dark assets for contrast)
         const assetSuffix = effectiveTheme === 'light' ? 'dark' : 'light';
 
-        // Update Still Goods logo
-        const stillGoodsLogo = document.querySelector('.brand-logo, .hero-logo');
+        // Update Still Goods header logo
+        const stillGoodsLogo = document.querySelector('.still-goods-logo');
         if (stillGoodsLogo) {
-            stillGoodsLogo.src = assets[`still-goods-${assetSuffix}`];
+            stillGoodsLogo.src = assets[`still-goods-logo-${assetSuffix}`];
+        }
+
+        // Update Still Goods hero logo (if it exists on homepage)
+        const stillGoodsHeroLogo = document.querySelector('.hero-logo');
+        if (stillGoodsHeroLogo) {
+            stillGoodsHeroLogo.src = assets[`still-goods-${assetSuffix}`];
         }
 
         // Update Max Stewart modal image if it exists

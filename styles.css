@@ -239,6 +239,11 @@ body.modal-active {
     border-radius: 4px;
 }
 
+.still-goods-logo {
+    height: 24px;
+    width: auto;
+}
+
 .brand-monogram {
     height: 20px;
     width: auto;
