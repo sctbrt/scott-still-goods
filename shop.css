@@ -1,0 +1,304 @@
+/* ===================================
+   Still Goods Shop Styles
+   =================================== */
+
+/* Shop Hero */
+.shop-hero {
+    padding: 6rem 0 4rem;
+    text-align: center;
+}
+
+.hero-logo {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 2rem;
+    display: block;
+}
+
+.hero-tagline {
+    font-size: 1.125rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--text-secondary);
+    opacity: 0.82;
+    line-height: 1.65;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* Coming Soon Section */
+.coming-soon {
+    padding: 4rem 0 6rem;
+}
+
+.notice-box {
+    max-width: 540px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.notice-box h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+}
+
+.notice-box > p {
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--text-secondary);
+    opacity: 0.82;
+    line-height: 1.65;
+    margin-bottom: 2.5rem;
+}
+
+/* Email Signup Form */
+.email-signup {
+    margin-top: 2.5rem;
+}
+
+.email-form-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.email-signup input[type="email"] {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    font-size: 0.9375rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--input-bg);
+    color: var(--text-primary);
+    transition: border-color 0.2s ease;
+}
+
+.email-signup input[type="email"]:focus {
+    outline: none;
+    border-color: var(--text-primary);
+}
+
+.email-submit {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+}
+
+.email-submit:hover {
+    opacity: 0.85;
+}
+
+.email-microcopy {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    opacity: 0.6;
+    margin: 0;
+}
+
+/* Cart Toggle */
+.cart-toggle {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cart-toggle:hover {
+    border-color: var(--text-primary);
+}
+
+/* Products Grid (for future use) */
+.products-grid {
+    padding: 4rem 0;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 3rem 2rem;
+}
+
+.product-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: opacity 0.2s ease;
+}
+
+.product-card:hover {
+    opacity: 0.85;
+}
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    background: var(--bg-secondary);
+}
+
+.product-name {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    font-family: monospace;
+}
+
+/* Brand Logo in Navigation */
+.site-brand .brand-logo {
+    height: 20px;
+    width: auto;
+    display: block;
+}
+
+/* Footer */
+.site-footer {
+    padding: 3rem 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: 4rem;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+.footer-text a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--border-color);
+    transition: text-decoration-color 0.2s ease;
+}
+
+.footer-text a:hover {
+    text-decoration-color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .shop-hero {
+        padding: 4rem 0 3rem;
+    }
+
+    .hero-logo {
+        max-width: 240px;
+    }
+
+    .email-form-group {
+        flex-direction: column;
+    }
+
+    .email-submit {
+        width: 100%;
+    }
+
+    .products {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 2rem 1.5rem;
+    }
+}
+
+/* About Page */
+.about-page {
+    padding: 4rem 0 6rem;
+}
+
+.about-content {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.about-content h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    letter-spacing: -0.02em;
+}
+
+.about-section {
+    margin-bottom: 3rem;
+}
+
+.about-section h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
+}
+
+.about-section p {
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--text-secondary);
+    opacity: 0.82;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+}
+
+.about-section p:last-child {
+    margin-bottom: 0;
+}
+
+.about-section a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--border-color);
+    transition: text-decoration-color 0.2s ease;
+}
+
+.about-section a:hover {
+    text-decoration-color: var(--text-primary);
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+}
+
+.values-list li {
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--text-secondary);
+    opacity: 0.82;
+    line-height: 1.65;
+    margin-bottom: 0.75rem;
+}
+
+.values-list li strong {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
