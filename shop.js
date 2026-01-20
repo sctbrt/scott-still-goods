@@ -50,9 +50,18 @@ function setupEmailForm() {
         submitButton.textContent = 'Submitting...';
 
         try {
-            // TODO: Replace with actual API endpoint
-            // For now, just simulate success
-            await new Promise(resolve => setTimeout(resolve, 1000));
+            // Submit to Formspree
+            const response = await fetch('https://formspree.io/f/mgoolyep', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email })
+            });
+
+            if (!response.ok) {
+                throw new Error('Submission failed');
+            }
 
             // Success
             submitButton.textContent = 'Thank you!';
@@ -64,7 +73,6 @@ function setupEmailForm() {
                 submitButton.textContent = originalText;
             }, 3000);
 
-            console.log('Email signup:', email);
         } catch (error) {
             // Error
             submitButton.textContent = 'Error. Try again?';
