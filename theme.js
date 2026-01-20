@@ -3,14 +3,18 @@
  * Handles light/dark theme switching and image swapping
  */
 
-// Import only Still Goods image variants for Vite build
+// Import image variants for Vite build
 import stillGoodsDark from './assets/still-goods-dark.png';
 import stillGoodsLight from './assets/still-goods-light.png';
+import fieldNotesMenuDark from './assets/field-notes-menu-dark.png';
+import fieldNotesMenuLight from './assets/field-notes-menu-light.png';
 
 // Create asset map for dynamic access
 const assets = {
     'still-goods-dark': stillGoodsDark,
-    'still-goods-light': stillGoodsLight
+    'still-goods-light': stillGoodsLight,
+    'field-notes-menu-dark': fieldNotesMenuDark,
+    'field-notes-menu-light': fieldNotesMenuLight
 };
 
 class ThemeManager {
@@ -73,6 +77,15 @@ class ThemeManager {
         if (stillGoodsLogo) {
             stillGoodsLogo.src = assets[`still-goods-${assetSuffix}`];
         }
+
+        // Update navigation menu images
+        const navImprintImages = document.querySelectorAll('.nav-imprint-img');
+        navImprintImages.forEach(img => {
+            const altText = img.alt;
+            if (altText === 'Field Notes') {
+                img.src = assets[`field-notes-menu-${assetSuffix}`];
+            }
+        });
     }
 }
 
