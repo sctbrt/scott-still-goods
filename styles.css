@@ -134,9 +134,8 @@ body.modal-active {
     padding: 0 24px;
     position: sticky;
     top: 1rem;
-    z-index: 100;
+    z-index: 1000;
     transition: all 0.3s ease;
-    isolation: isolate;
 }
 
 .nav-container {
