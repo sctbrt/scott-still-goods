@@ -1016,6 +1016,23 @@ body.modal-active {
     opacity: 0.9;
 }
 
+/* Theme switching for dropdown brand images */
+.dropdown-brand-img--light {
+    display: none;
+}
+
+.dropdown-brand-img--dark {
+    display: block;
+}
+
+[data-theme="dark"] .dropdown-brand-img--light {
+    display: block;
+}
+
+[data-theme="dark"] .dropdown-brand-img--dark {
+    display: none;
+}
+
 .dropdown-descriptor {
     display: block;
     font-size: 0.875rem;
