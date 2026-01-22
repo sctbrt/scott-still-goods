@@ -708,6 +708,22 @@ body.modal-active {
     display: block;
 }
 
+/* Form fallback link */
+.form-fallback {
+    font-size: 0.8125rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+.form-fallback a {
+    color: var(--text-secondary);
+    text-decoration: underline;
+}
+
+.form-fallback a:hover {
+    color: var(--text-primary);
+}
+
 /* ===================================
    Modal
    =================================== */
