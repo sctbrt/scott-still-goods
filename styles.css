@@ -5,13 +5,13 @@
 /* CSS Variables for Theming */
 :root {
     /* Dark theme (default) - Deep navy */
-    --bg-primary: #000000;
+    --bg-primary: #0f1d32;
     --bg-page: #0a1628;
     --text-primary: #ffffff;
     --text-secondary: #a8a8a8;
     --text-tertiary: #6b6b6b;
-    --border-subtle: #1a1a1a;
-    --border-hover: #4a4a4a;
+    --border-subtle: #1a2a40;
+    --border-hover: #2a3a50;
     --success-bg: #0d1f0d;
     --success-border: #1e3a1e;
     --success-text: #86efac;
