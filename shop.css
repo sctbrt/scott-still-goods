@@ -16,6 +16,24 @@
     display: block;
 }
 
+/* Theme-based hero logo switching
+   Default shows dark logo since light theme has light bg */
+.hero-logo--light {
+    display: none;
+}
+
+.hero-logo--dark {
+    display: block;
+}
+
+[data-theme="dark"] .hero-logo--light {
+    display: block;
+}
+
+[data-theme="dark"] .hero-logo--dark {
+    display: none;
+}
+
 .hero-tagline {
     font-size: 1.125rem;
     font-family: Georgia, 'Times New Roman', serif;
