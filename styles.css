@@ -4,8 +4,9 @@
 
 /* CSS Variables for Theming */
 :root {
-    /* Dark theme (default) */
+    /* Dark theme (default) - Deep navy */
     --bg-primary: #000000;
+    --bg-page: #0a1628;
     --text-primary: #ffffff;
     --text-secondary: #a8a8a8;
     --text-tertiary: #6b6b6b;
@@ -17,7 +18,9 @@
 }
 
 [data-theme="light"] {
+    /* Light theme - Warm ceramic */
     --bg-primary: #ffffff;
+    --bg-page: #f5f0e8;
     --text-primary: #000000;
     --text-secondary: #404040;
     --text-tertiary: #6b6b6b;
@@ -44,7 +47,7 @@ html {
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-page);
     color: var(--text-primary);
     min-height: 100dvh;
     line-height: 1.5;
