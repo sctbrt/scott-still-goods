@@ -1,3 +1,7 @@
+// Import stylesheets for Vite bundling
+import './styles.css';
+import './shop.css';
+
 /**
  * Theme Manager — v1.3.0
  * Light-default theme system with OS listener support
