@@ -6,12 +6,15 @@
 :root {
     /* Dark theme (default) - Deep navy */
     --bg-primary: #0f1d32;
+    --bg-secondary: #1a2a40;
     --bg-page: #0a1628;
     --text-primary: #ffffff;
     --text-secondary: #a8a8a8;
     --text-tertiary: #6b6b6b;
     --border-subtle: #1a2a40;
+    --border-color: #2a3a50;
     --border-hover: #2a3a50;
+    --input-bg: #1a2a40;
     --success-bg: #0d1f0d;
     --success-border: #1e3a1e;
     --success-text: #86efac;
@@ -27,12 +30,15 @@
 [data-theme="light"] {
     /* Light theme - Warm ceramic */
     --bg-primary: #ffffff;
+    --bg-secondary: #f5f0e8;
     --bg-page: #f5f0e8;
     --text-primary: #000000;
     --text-secondary: #404040;
     --text-tertiary: #6b6b6b;
     --border-subtle: #d4d4d4;
+    --border-color: #d4d4d4;
     --border-hover: #8a8a8a;
+    --input-bg: #ffffff;
     --success-bg: #f0fdf4;
     --success-border: #86efac;
     --success-text: #166534;
@@ -92,38 +98,6 @@ body.modal-active {
 /* Apply animations to elements */
 .site-header {
     animation: fadeIn 0.6s ease-out;
-}
-
-.wordmark {
-    animation: fadeInUp 0.8s ease-out 0.2s backwards;
-}
-
-.tagline {
-    animation: fadeInUp 0.8s ease-out 0.4s backwards;
-}
-
-.philosophy {
-    animation: fadeInUp 0.8s ease-out 0.6s backwards;
-}
-
-.section {
-    animation: fadeInUp 0.8s ease-out backwards;
-}
-
-.section:nth-of-type(2) {
-    animation-delay: 0.2s;
-}
-
-.section:nth-of-type(3) {
-    animation-delay: 0.3s;
-}
-
-.section:nth-of-type(4) {
-    animation-delay: 0.4s;
-}
-
-.contact-section {
-    animation: fadeInUp 0.8s ease-out 0.2s backwards;
 }
 
 .email-signup {
@@ -483,82 +457,9 @@ body.modal-active {
     gap: 2rem;
 }
 
-.hero-tree {
-    height: 108px;
-    width: auto;
-}
-
 .hero-wordmark {
     height: 34px;
     width: auto;
-}
-
-/* Wordmark */
-.wordmark {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.wordmark-monogram {
-    height: 48px;
-    width: auto;
-}
-
-.wordmark-separator {
-    color: var(--text-primary);
-    font-size: 2.25rem;
-    font-weight: 200;
-    line-height: 1;
-    margin: 0 0.5rem;
-}
-
-.wordmark-text {
-    height: 34px;
-    width: auto;
-}
-
-/* Tagline */
-.tagline {
-    font-size: 1.375rem;
-    font-weight: 500;
-    margin-bottom: 16px;
-    letter-spacing: -0.01em;
-    color: var(--text-primary);
-}
-
-/* Philosophy */
-.philosophy {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 1.125rem;
-    font-weight: 400;
-    color: var(--text-secondary);
-    opacity: 0.75;
-    margin-bottom: 3rem;
-    line-height: 1.7;
-}
-
-/* Scroll Cue */
-.scroll-cue {
-    position: absolute;
-    bottom: 32px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-}
-
-.scroll-cue a {
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--text-primary);
-    text-decoration: none;
-    opacity: 0.4;
-    transition: opacity 0.2s ease;
-}
-
-.scroll-cue a:hover {
-    opacity: 0.7;
 }
 
 @media (max-width: 640px) {
