@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Order Confirmed — Still Goods</title>
+    <meta name="description" content="Thank you for your order. Your Still Goods purchase is confirmed.">
+    <meta name="robots" content="noindex">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/still-goods-icon.png">
+
+    <!-- Cloudflare Web Analytics (production only) -->
+    <script>
+    if (location.hostname === 'goods.scottbertrand.com') {
+        var s = document.createElement('script');
+        s.defer = true;
+        s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+        s.setAttribute('data-cf-beacon', '{"token": "YOUR_CLOUDFLARE_TOKEN_HERE"}');
+        document.head.appendChild(s);
+    }
+    </script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shop.css">
+    <style>
+        .success-page {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 0;
+        }
+
+        .success-content {
+            text-align: center;
+            max-width: 480px;
+        }
+
+        .success-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .success-title {
+            font-size: 1.75rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+
+        .success-message {
+            font-family: Georgia, 'Times New Roman', serif;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .success-details {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            opacity: 0.8;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: 4px;
+        }
+
+        .success-link {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: opacity 0.2s ease;
+        }
+
+        .success-link:hover {
+            opacity: 0.85;
+        }
+
+        .success-contact {
+            margin-top: 2rem;
+            font-size: 0.8125rem;
+            color: var(--text-secondary);
+            opacity: 0.7;
+        }
+
+        .success-contact a {
+            color: inherit;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu Backdrop -->
+    <div class="menu-backdrop" id="menuBackdrop" aria-hidden="true"></div>
+
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="https://scottbertrand.com/" class="site-brand">
+                <img src="assets/sb-monogram-light.png" alt="SB" class="brand-monogram brand-monogram--light" width="100" height="100">
+                <img src="assets/sb-monogram-dark.png" alt="SB" class="brand-monogram brand-monogram--dark" width="100" height="100">
+                <span class="brand-separator">|</span>
+                <img src="assets/scott-bertrand-wordmark-light.png" alt="Scott Bertrand" class="brand-wordmark brand-wordmark--light" width="400" height="100">
+                <img src="assets/scott-bertrand-wordmark-dark.png" alt="Scott Bertrand" class="brand-wordmark brand-wordmark--dark" width="400" height="100">
+            </a>
+
+            <nav class="nav-menu" id="navMenu" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+                <button type="button" class="mobile-menu-close" aria-label="Close menu"></button>
+                <a href="https://goods.scottbertrand.com/">Shop</a>
+                <a href="https://goods.scottbertrand.com/about.html">About</a>
+                <a href="https://scottbertrand.com/contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-utilities">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-icon">◐</span>
+                </button>
+
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Success Page -->
+    <main class="success-page">
+        <div class="container">
+            <div class="success-content">
+                <div class="success-icon">✓</div>
+                <h1 class="success-title">Order Confirmed</h1>
+                <p class="success-message">
+                    Thank you for your purchase. You'll receive a confirmation email shortly with your order details and tracking information once your item ships.
+                </p>
+                <div class="success-details">
+                    <p>Orders ship within 5–7 business days.<br>Free shipping across Canada.</p>
+                </div>
+                <a href="https://goods.scottbertrand.com/" class="success-link">Continue Shopping</a>
+                <p class="success-contact">
+                    Questions about your order? <a href="mailto:bertrandbrands@outlook.com">Email us</a>.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p class="footer-text">
+                &copy; 2025 Still Goods. A project by <a href="https://scottbertrand.com">Scott Bertrand</a>.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="theme.js"></script>
+    <script type="module" src="dropdown.js"></script>
+    <script type="module" src="visitor-notify.js"></script>
+</body>
+</html>
