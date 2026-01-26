@@ -384,7 +384,24 @@
 }
 
 .about-title-logo {
-    height: 2em;
+    height: 1.1em;
     width: auto;
-    opacity: 0.65;
+    vertical-align: baseline;
+}
+
+/* Theme-based logo switching for About title */
+.about-title-logo--light {
+    display: none;
+}
+
+.about-title-logo--dark {
+    display: inline;
+}
+
+[data-theme="light"] .about-title-logo--light {
+    display: inline;
+}
+
+[data-theme="light"] .about-title-logo--dark {
+    display: none;
 }

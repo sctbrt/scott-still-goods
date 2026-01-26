@@ -4,7 +4,7 @@
 
 /* CSS Variables for Theming */
 :root {
-    /* Dark theme (default) - Light sage green */
+    /* Light theme (default) - Light sage green */
     --bg-primary: #d4ddd6;
     --bg-secondary: #c4cec8;
     --bg-page: #e0e8e2;
@@ -36,20 +36,37 @@
 }
 
 [data-theme="light"] {
-    /* Light theme - Warm ceramic & linen */
-    --bg-primary: #faf8f5;
-    --bg-secondary: #f0ebe3;
-    --bg-page: #f5f2ed;
-    --text-primary: #2a2a28;
-    --text-secondary: #5a5852;
-    --text-tertiary: #8a8880;
-    --border-subtle: #e0dbd3;
-    --border-color: #d0c9c0;
-    --border-hover: #a89f94;
-    --input-bg: #faf8f5;
-    --success-bg: #f0f5f0;
+    /* Light theme override - same as root for consistency */
+    --bg-primary: #d4ddd6;
+    --bg-secondary: #c4cec8;
+    --bg-page: #e0e8e2;
+    --text-primary: #2a322c;
+    --text-secondary: #4a524c;
+    --text-tertiary: #6a726c;
+    --border-subtle: #b4c4ba;
+    --border-color: #a4b4aa;
+    --border-hover: #8a9a90;
+    --input-bg: #e8f0ea;
+    --success-bg: #d4e8d8;
     --success-border: #98b4a3;
     --success-text: #3a5a44;
+}
+
+[data-theme="dark"] {
+    /* Dark theme - Darker sage */
+    --bg-primary: #1a1f1c;
+    --bg-secondary: #252a27;
+    --bg-page: #141816;
+    --text-primary: #d4ddd6;
+    --text-secondary: #a4b4aa;
+    --text-tertiary: #7a8a80;
+    --border-subtle: #2a322c;
+    --border-color: #3a423c;
+    --border-hover: #4a524c;
+    --input-bg: #1a1f1c;
+    --success-bg: #1a2a1e;
+    --success-border: #3a5a44;
+    --success-text: #98b4a3;
 }
 
 /* ===================================
