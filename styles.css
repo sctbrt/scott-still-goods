@@ -4,20 +4,28 @@
 
 /* CSS Variables for Theming */
 :root {
-    /* Dark theme (default) - Deep navy */
-    --bg-primary: #0f1d32;
-    --bg-secondary: #1a2a40;
-    --bg-page: #0a1628;
-    --text-primary: #ffffff;
-    --text-secondary: #a8a8a8;
-    --text-tertiary: #6b6b6b;
-    --border-subtle: #1a2a40;
-    --border-color: #2a3a50;
-    --border-hover: #2a3a50;
-    --input-bg: #1a2a40;
-    --success-bg: #0d1f0d;
-    --success-border: #1e3a1e;
-    --success-text: #86efac;
+    /* Dark theme (default) - Light sage green */
+    --bg-primary: #d4ddd6;
+    --bg-secondary: #c4cec8;
+    --bg-page: #e0e8e2;
+    --text-primary: #2a322c;
+    --text-secondary: #4a524c;
+    --text-tertiary: #6a726c;
+    --border-subtle: #b4c4ba;
+    --border-color: #a4b4aa;
+    --border-hover: #8a9a90;
+    --input-bg: #e8f0ea;
+    --success-bg: #d4e8d8;
+    --success-border: #98b4a3;
+    --success-text: #3a5a44;
+
+    /* Brand accent */
+    --sage: #8fa89a;
+    --sage-light: #a8c4b4;
+    --sage-dark: #6a8a78;
+    --warm-cream: #f5f2ed;
+    --warm-taupe: #a89f94;
+    --warm-wood: #8a7a68;
 
     /* Motion tokens */
     --t-fast: 120ms;
@@ -28,20 +36,20 @@
 }
 
 [data-theme="light"] {
-    /* Light theme - Warm ceramic */
-    --bg-primary: #ffffff;
-    --bg-secondary: #f5f0e8;
-    --bg-page: #f5f0e8;
-    --text-primary: #000000;
-    --text-secondary: #404040;
-    --text-tertiary: #6b6b6b;
-    --border-subtle: #d4d4d4;
-    --border-color: #d4d4d4;
-    --border-hover: #8a8a8a;
-    --input-bg: #ffffff;
-    --success-bg: #f0fdf4;
-    --success-border: #86efac;
-    --success-text: #166534;
+    /* Light theme - Warm ceramic & linen */
+    --bg-primary: #faf8f5;
+    --bg-secondary: #f0ebe3;
+    --bg-page: #f5f2ed;
+    --text-primary: #2a2a28;
+    --text-secondary: #5a5852;
+    --text-tertiary: #8a8880;
+    --border-subtle: #e0dbd3;
+    --border-color: #d0c9c0;
+    --border-hover: #a89f94;
+    --input-bg: #faf8f5;
+    --success-bg: #f0f5f0;
+    --success-border: #98b4a3;
+    --success-text: #3a5a44;
 }
 
 /* ===================================

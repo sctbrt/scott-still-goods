@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
-  <rect fill="#0f1419" width="800" height="800"/>
-  <circle fill="#1a2332" cx="400" cy="400" r="120"/>
-  <circle fill="#243044" cx="400" cy="400" r="90"/>
-  <text fill="#4a5568" font-family="system-ui, sans-serif" font-size="18" font-weight="300" text-anchor="middle" x="400" y="580">Brass Paperweight</text>
+  <rect fill="#e0e8e2" width="800" height="800"/>
+  <circle fill="#c4a868" cx="400" cy="400" r="120"/>
+  <circle fill="#d4b878" cx="400" cy="400" r="90"/>
+  <circle fill="#e4c888" cx="380" cy="380" r="15" opacity="0.4"/>
+  <text fill="#7a6a4a" font-family="system-ui, sans-serif" font-size="18" font-weight="300" text-anchor="middle" x="400" y="580">Brass Paperweight</text>
 </svg>
