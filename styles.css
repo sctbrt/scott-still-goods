@@ -4,28 +4,30 @@
 
 /* CSS Variables for Theming */
 :root {
-    /* Light theme (default) - Light sage green */
-    --bg-primary: #d4ddd6;
-    --bg-secondary: #c4cec8;
-    --bg-page: #e0e8e2;
-    --text-primary: #2a322c;
-    --text-secondary: #4a524c;
-    --text-tertiary: #6a726c;
-    --border-subtle: #b4c4ba;
-    --border-color: #a4b4aa;
-    --border-hover: #8a9a90;
-    --input-bg: #e8f0ea;
-    --success-bg: #d4e8d8;
-    --success-border: #98b4a3;
-    --success-text: #3a5a44;
+    /* Prevent Chrome Auto Dark Mode */
+    color-scheme: light dark;
 
-    /* Brand accent */
-    --sage: #8fa89a;
-    --sage-light: #a8c4b4;
-    --sage-dark: #6a8a78;
-    --warm-cream: #f5f2ed;
-    --warm-taupe: #a89f94;
-    --warm-wood: #8a7a68;
+    /* Light theme (default) - Warm Minimal */
+    --bg-primary: #f5f3f0;
+    --bg-secondary: #eae7e3;
+    --bg-page: #faf9f7;
+    --text-primary: #1a1918;
+    --text-secondary: #57534e;
+    --text-tertiary: #78716c;
+    --border-subtle: #e7e5e4;
+    --border-color: #d6d3d1;
+    --border-hover: #a8a29e;
+    --input-bg: #ffffff;
+    --success-bg: #f0fdf4;
+    --success-border: #86efac;
+    --success-text: #166534;
+
+    /* Brand accent - warm stone tones */
+    --accent: #a8a29e;
+    --accent-warm: #d4a574;
+    --accent-muted: #78716c;
+    --surface: #ffffff;
+    --surface-elevated: #ffffff;
 
     /* Motion tokens */
     --t-fast: 120ms;
@@ -37,36 +39,42 @@
 
 [data-theme="light"] {
     /* Light theme override - same as root for consistency */
-    --bg-primary: #d4ddd6;
-    --bg-secondary: #c4cec8;
-    --bg-page: #e0e8e2;
-    --text-primary: #2a322c;
-    --text-secondary: #4a524c;
-    --text-tertiary: #6a726c;
-    --border-subtle: #b4c4ba;
-    --border-color: #a4b4aa;
-    --border-hover: #8a9a90;
-    --input-bg: #e8f0ea;
-    --success-bg: #d4e8d8;
-    --success-border: #98b4a3;
-    --success-text: #3a5a44;
+    --bg-primary: #f5f3f0;
+    --bg-secondary: #eae7e3;
+    --bg-page: #faf9f7;
+    --text-primary: #1a1918;
+    --text-secondary: #57534e;
+    --text-tertiary: #78716c;
+    --border-subtle: #e7e5e4;
+    --border-color: #d6d3d1;
+    --border-hover: #a8a29e;
+    --input-bg: #ffffff;
+    --success-bg: #f0fdf4;
+    --success-border: #86efac;
+    --success-text: #166534;
 }
 
 [data-theme="dark"] {
-    /* Dark theme - Darker sage */
-    --bg-primary: #1a1f1c;
-    --bg-secondary: #252a27;
-    --bg-page: #141816;
-    --text-primary: #d4ddd6;
-    --text-secondary: #a4b4aa;
-    --text-tertiary: #7a8a80;
-    --border-subtle: #2a322c;
-    --border-color: #3a423c;
-    --border-hover: #4a524c;
-    --input-bg: #1a1f1c;
-    --success-bg: #1a2a1e;
-    --success-border: #3a5a44;
-    --success-text: #98b4a3;
+    /* Dark theme - Warm charcoal */
+    --bg-primary: #1c1917;
+    --bg-secondary: #292524;
+    --bg-page: #0c0a09;
+    --text-primary: #fafaf9;
+    --text-secondary: #a8a29e;
+    --text-tertiary: #78716c;
+    --border-subtle: #292524;
+    --border-color: #44403c;
+    --border-hover: #57534e;
+    --input-bg: #1c1917;
+    --success-bg: #14532d;
+    --success-border: #166534;
+    --success-text: #86efac;
+
+    /* Dark mode accents */
+    --accent: #a8a29e;
+    --accent-warm: #d4a574;
+    --surface: #1c1917;
+    --surface-elevated: #292524;
 }
 
 /* ===================================

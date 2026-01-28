@@ -36,7 +36,7 @@ class ThemeManager {
 
     getSavedMode() {
         // Check localStorage for saved preference
-        const saved = localStorage.getItem('sb-theme');
+        const saved = localStorage.getItem('sg-theme');
         if (saved && ['light', 'dark', 'system'].includes(saved)) {
             return saved;
         }
@@ -57,7 +57,7 @@ class ThemeManager {
         this.currentMode = modes[nextIndex];
 
         // Save and apply
-        localStorage.setItem('sb-theme', this.currentMode);
+        localStorage.setItem('sg-theme', this.currentMode);
         this.applyTheme();
     }
 

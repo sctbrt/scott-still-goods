@@ -1,7 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
+    <!-- Prevent Chrome Auto Dark Mode from inverting colors -->
+    <meta name="color-scheme" content="light dark">
+    <!-- Prevent flash of wrong theme - light is default unless explicitly set to dark -->
+    <script>
+        (function() {
+            const saved = localStorage.getItem('sg-theme');
+            // Only go dark if explicitly saved as 'dark'
+            // 'light' or no preference = light theme (ignores system dark mode)
+            if (saved === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+            // 'light' is already set on <html> tag
+        })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About — Still Goods</title>
     <meta name="description" content="About Still Goods and our approach to thoughtful craft.">
@@ -26,34 +40,88 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="shop.css">
-    <link rel="stylesheet" href="nav-v3.css">
+    <link rel="stylesheet" href="nav-quiet.css">
 </head>
 <body>
-    <!-- V3 Glass Navigation -->
-    <header class="header visible lights-on">
-        <div class="header__glass">
-            <div class="header__inner">
-                <a href="https://scottbertrand.com/" class="header__logo">
-                    <img src="assets/sb-dotted-logomark.png" alt="SB" class="header__logo-mark sb-monogram" width="50" height="32">
-                    <span class="header__logo-divider">|</span>
-                    <span class="header__logo-text">Scott Bertrand</span>
-                </a>
-                <nav class="header__nav">
-                    <a href="https://scottbertrand.com/#design-studio" class="header__link header__link--primary header__link--ghosted">
-                        Bertrand Brands
-                        <span class="header__link-soon">Coming Soon</span>
-                    </a>
-                    <a href="https://scottbertrand.com/#ventures" class="header__link">Ventures</a>
-                    <a href="https://scottbertrand.com/#contact" class="header__link">Contact</a>
-                </nav>
-            </div>
+    <!-- Quiet Minimal Navigation -->
+    <header class="quiet-nav">
+        <div class="quiet-nav__bar">
+            <a href="/" class="quiet-nav__logo">
+                <img src="assets/still-goods-logo-dark.png" alt="Still Goods" class="quiet-nav__logo-img quiet-nav__logo-img--dark">
+                <img src="assets/still-goods-logo-light.png" alt="Still Goods" class="quiet-nav__logo-img quiet-nav__logo-img--light">
+            </a>
+            <button class="quiet-nav__trigger" aria-label="Open menu" aria-expanded="false">
+                <span class="quiet-nav__trigger-text">Menu</span>
+                <span class="quiet-nav__trigger-icon">
+                    <span class="quiet-nav__trigger-line"></span>
+                    <span class="quiet-nav__trigger-line"></span>
+                </span>
+            </button>
         </div>
     </header>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div class="quiet-nav__overlay" aria-hidden="true">
+        <div class="quiet-nav__overlay-header">
+            <img src="assets/still-goods-logo-dark.png" alt="Still Goods" class="quiet-nav__overlay-logo quiet-nav__overlay-logo--dark">
+            <img src="assets/still-goods-logo-light.png" alt="Still Goods" class="quiet-nav__overlay-logo quiet-nav__overlay-logo--light">
+            <button class="quiet-nav__close" aria-label="Close menu">
+                <span class="quiet-nav__close-text">Close</span>
+                <span class="quiet-nav__close-icon"></span>
+            </button>
+        </div>
+
+        <nav class="quiet-nav__menu">
+            <ul class="quiet-nav__categories">
+                <li class="quiet-nav__category">
+                    <a href="/apparel" class="quiet-nav__category-link" data-preview="assets/preview-apparel.jpg">
+                        Apparel
+                    </a>
+                </li>
+                <li class="quiet-nav__category">
+                    <a href="/accessories" class="quiet-nav__category-link" data-preview="assets/preview-accessories.jpg">
+                        Accessories
+                    </a>
+                </li>
+                <li class="quiet-nav__category">
+                    <a href="/home-kitchen" class="quiet-nav__category-link" data-preview="assets/preview-home.jpg">
+                        Home & Kitchen
+                    </a>
+                </li>
+                <li class="quiet-nav__category">
+                    <a href="/desk-workspace" class="quiet-nav__category-link" data-preview="assets/preview-desk.jpg">
+                        Desk & Workspace
+                    </a>
+                </li>
+                <li class="quiet-nav__category">
+                    <a href="/about" class="quiet-nav__category-link">
+                        About
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="quiet-nav__footer">
+            <div class="quiet-nav__footer-links">
+                <a href="https://scottbertrand.com" class="quiet-nav__footer-link">Scott Bertrand</a>
+                <a href="mailto:hello@bertrandbrands.com" class="quiet-nav__footer-link">Contact</a>
+            </div>
+            <button class="quiet-nav__theme-toggle">
+                <span class="quiet-nav__theme-icon">☾</span>
+                <span>Theme</span>
+            </button>
+        </div>
+
+        <!-- Cursor-following preview image (desktop) -->
+        <div class="quiet-nav__preview">
+            <img src="" alt="" class="quiet-nav__preview-img">
+        </div>
+    </div>
 
     <!-- About Content -->
     <main class="about-page">
@@ -61,7 +129,7 @@
             <article class="about-content">
                 <h1 class="about-title">
                     <span class="about-title-prefix">About</span>
-                    <img src="assets/still-goods-mint.png" alt="Still Goods" class="about-title-logo about-title-logo--dark">
+                    <img src="assets/still-goods-logo-dark.png" alt="Still Goods" class="about-title-logo about-title-logo--dark">
                     <img src="assets/still-goods-logo-light.png" alt="Still Goods" class="about-title-logo about-title-logo--light">
                 </h1>
 
@@ -121,8 +189,7 @@
     <script type="module" src="theme.js"></script>
     <script type="module" src="modal.js"></script>
     <script type="module" src="shop.js"></script>
-    <script type="module" src="dropdown.js"></script>
+    <script src="nav-quiet.js"></script>
     <script type="module" src="visitor-notify.js"></script>
-    <script src="nav-v3.js"></script>
 </body>
 </html>
